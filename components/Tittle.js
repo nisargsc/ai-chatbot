@@ -1,4 +1,4 @@
-const Tittle = () => {
+export default function Tittle(props) {
     return (
         <div id="tittle" className="flex sm:items-center justify-between py-3 px-3 shadow-md rounded-md rounded-b-none bg-slate-300">
             <div className="relative flex items-center space-x-4">
@@ -12,5 +12,3 @@ const Tittle = () => {
         </div>
     );
 }
-
-export default Tittle;
