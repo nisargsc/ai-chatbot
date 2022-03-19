@@ -1,6 +1,7 @@
 import Chatbot from "../components/chatbot";
 
-export default function Home() {
+export default function Home(props) {
+  // console.log("in home", props)
   return (
     <div className="flex min-h-screen py-2 justify-center items-center bg-slate-700">
       <head>
@@ -9,7 +10,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </head>
 
-      <Chatbot />
+      <Chatbot convo={ props.convo }/>
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  const res = await fetch("http://localhost:3000/api/convo")
+  const data = await res.json()
+  const { convo } = data
+  // console.log("in serversideprops", convo)
+  return {
+    props: {
+        convo: convo
+    },
+  }
 }
