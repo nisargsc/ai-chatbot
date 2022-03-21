@@ -1,21 +1,31 @@
 export function botMessages(user_msg) {
     let messages = []
     let bot_msg="Sorry, I didn't understand that."
+    let flag = false
 
     if(user_msg.match(/.*i'm.*/gi) || user_msg.match(/.*i am.*/gi)) {
-	    bot_msg="Hi, I am a bot! How can I help you?";
+        if(user_msg.match(/.*hungry.*/gi)) {
+            bot_msg="If you are hungry, Tell me what you like to eat? Maggi/Burger/Sandwich/Ice cream"
+            messages.push(getMessageObj(bot_msg))
+            flag = true
+        } else {
+            bot_msg="Hi, I am a bot! How can I help you?";
+            messages.push(getMessageObj(bot_msg))
+        }
+    }
 
+    if(user_msg.match(/.*hi.*/gi)) {
+	    bot_msg="Hi, I am a bot! How can I help you?";
         messages.push(getMessageObj(bot_msg))
     }
-    else if(user_msg.match(/.*hi.*/gi)) {
-	    bot_msg="Hi, I am a bot! How can I help you?";
 
+    if(user_msg.match(/.*hungry.*/gi) && !flag) {
+        bot_msg="If you are hungry, Tell me what you like to eat? Maggi/Burger/Sandwich/Ice cream"
         messages.push(getMessageObj(bot_msg))
     }
 
     if(user_msg.match(/.*maggi.*/gi)) {
 	    bot_msg="You may like yumppies or hotspot.";
-
         messages.push(getMessageObj(bot_msg))
     }
     
@@ -46,10 +56,10 @@ export function botMessages(user_msg) {
 
     if(messages.length==0) {
         messages.push(getMessageObj(bot_msg))
-        bot_msg="Can you please repeat?"
+
+        bot_msg="If you are hungry, Tell me what you like to eat? Maggi/Burger/Sandwich/Ice cream"
         messages.push(getMessageObj(bot_msg))
-        bot_msg="If you are hungry, Tell me what you like to eat?"
-        messages.push(getMessageObj(bot_msg))
+
         bot_msg="If you want to know weather, Type weather"
         messages.push(getMessageObj(bot_msg))
     }
