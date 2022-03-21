@@ -2,11 +2,10 @@ import React from 'react';
 import { updatedChat } from '../utils/chat';
 import { useChat, useChatUpdate } from './ChatContext';
 
-let msgRef = React.createRef();
-
 export default function Inputform() {
     const chat = useChat();
     const setChat = useChatUpdate();
+    let msgRef = React.createRef();
 
     return (
         <div id="input" className="border-t-2 border-gray-200 shadow-md px-2 py-2 mb-2 sm:mb-0 relative flex rounded-md bg-slate-300">
