@@ -1,6 +1,6 @@
-import Tittle from "./Tittle";
-import Inputform from "./Inputform";
-import Chatarea from "./Chatarea";
+import Tittle from "./tittle";
+import Inputform from "./inputform";
+import Chatarea from "./chatarea";
 
 export default function Chatbot()  {
     return (

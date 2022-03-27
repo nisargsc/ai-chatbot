@@ -1,5 +1,5 @@
-import Botmsg from "./Botmsg";
-import Usermsg from "./Usermsg";
+import Botmsg from "./botmsg";
+import Usermsg from "./usermsg";
 
 export default function Msg({ sender, msg , i}) {
     console.log(i+ "| " +sender+" : "+msg)

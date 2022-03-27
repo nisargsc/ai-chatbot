@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Chatbot from "../components/chatbot";
-import { ChatProvider, useChat, useChatUpdate } from "../components/ChatContext";
+import { ChatProvider, useChat, useChatUpdate } from "../components/chatcontext";
 
 export default function Home() {
     const chat = useChat();

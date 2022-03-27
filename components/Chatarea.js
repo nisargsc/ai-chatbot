@@ -1,5 +1,5 @@
-import { useChat } from "./ChatContext";
-import Msg from "./Msg";
+import { useChat } from "./chatcontext";
+import Msg from "./msg";
 
 export default function Chatarea() {
     const chat = useChat();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { updatedChat } from '../utils/chat';
-import { useChat, useChatUpdate } from './ChatContext';
+import { useChat, useChatUpdate } from './chatcontext';
 
 export default function Inputform() {
     const chat = useChat();
