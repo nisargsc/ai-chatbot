@@ -11,3 +11,6 @@ You would need node.js and npm installed in your system. After that follow the s
 npm install
 npm run dev
 ```
+
+## Example
+<img src="./bot.jpg">

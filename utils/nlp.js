@@ -45,7 +45,7 @@ export function botMessages(user_msg) {
     }
     
     if(user_msg.match(/.*weather.*/gi)) {
-        bot_msg="The current temperature at Hyderabad is 35 degrees.";
+        bot_msg="The current temperature at Hyderabad is 30 degrees.";
         messages.push(getMessageObj(bot_msg))
     }
 
